@@ -1,0 +1,1 @@
+Simple Tetris game written in C++ with ncurses lib.
