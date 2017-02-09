@@ -33,9 +33,9 @@ OBJS_ntetris =  \
 	$(TARGETDIR_ntetris)/Tvar.o \
 	$(TARGETDIR_ntetris)/Stavba.o \
 	$(TARGETDIR_ntetris)/Bod.o
-SYSLIBS_ntetris = -lcurses 
-USERLIBS_ntetris = /lib64/libncursesw.so.6.0 /lib64/libncursesw.so.6 /lib64/libncurses.so.6.0 /lib64/libncurses.so.6 $(SYSLIBS_ntetris) 
-DEPLIBS_ntetris =      
+SYSLIBS_ntetris = -lncurses
+USERLIBS_ntetris = $(SYSLIBS_ntetris)
+DEPLIBS_ntetris =
 LDLIBS_ntetris = $(USERLIBS_ntetris)
 
 
