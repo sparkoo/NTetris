@@ -41,27 +41,27 @@ LDLIBS_ntetris = $(USERLIBS_ntetris)
 
 # Link or archive
 $(TARGETDIR_ntetris)/ntetris: $(TARGETDIR_ntetris) $(OBJS_ntetris) $(DEPLIBS_ntetris)
-	$(LINK.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ $(OBJS_ntetris) $(LDLIBS_ntetris)
+	$(LINK.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ $(OBJS_ntetris) $(LDLIBS_ntetris)
 
 
 # Compile source files into .o files
 $(TARGETDIR_ntetris)/main.o: $(TARGETDIR_ntetris) src/main.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/main.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/main.cpp
 
 $(TARGETDIR_ntetris)/init.o: $(TARGETDIR_ntetris) src/init.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/init.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/init.cpp
 
 $(TARGETDIR_ntetris)/Kostka.o: $(TARGETDIR_ntetris) src/Kostka.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Kostka.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Kostka.cpp
 
 $(TARGETDIR_ntetris)/Tvar.o: $(TARGETDIR_ntetris) src/Tvar.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Tvar.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Tvar.cpp
 
 $(TARGETDIR_ntetris)/Stavba.o: $(TARGETDIR_ntetris) src/Stavba.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Stavba.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Stavba.cpp
 
 $(TARGETDIR_ntetris)/Bod.o: $(TARGETDIR_ntetris) src/Bod.cpp
-	$(COMPILE.cc) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Bod.cpp
+	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Bod.cpp
 
 
 
