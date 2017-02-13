@@ -11,11 +11,14 @@
 #### Compiler and tool definitions shared by all build targets #####
 CCC = g++
 CXX = g++
-BASICOPTS = -g
+BASICOPTS = -g -O2
 CCFLAGS = $(BASICOPTS)
 CXXFLAGS = $(BASICOPTS)
 CCADMIN = 
 
+# where to install this program
+PREFIX := /usr/local
+VERSION := 0.3.0
 
 # Define the target directories.
 TARGETDIR_ntetris=build
@@ -63,7 +66,12 @@ $(TARGETDIR_ntetris)/Stavba.o: $(TARGETDIR_ntetris) src/Stavba.cpp
 $(TARGETDIR_ntetris)/Bod.o: $(TARGETDIR_ntetris) src/Bod.cpp
 	$(COMPILE.cc) $(CFLAGS) $(CCFLAGS_ntetris) $(CPPFLAGS_ntetris) -o $@ src/Bod.cpp
 
+install:
+	install -d $(DESTDIR)$(PREFIX)/bin
+	install -m 0755 $(TARGETDIR_ntetris)/ntetris $(DESTDIR)$(PREFIX)/bin
 
+uninstall:
+	rm -rf $(DESTDIR)$(PREFIX)/ntetris
 
 #### Clean target deletes all generated files ####
 clean:

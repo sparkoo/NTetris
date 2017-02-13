@@ -18,14 +18,12 @@ Ncurses-based simple tetris game for CLI gaming.
 
 %build
 make clean
-make CFLAGS="%{optflags}" all
-
-%define  debug_package %{nil}
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{__global_ldflags} -Wl,--build-id=sha1"
+%make_build PREFIX=%{_prefix}
 
 %install
-mkdir -p %{buildroot}%{_bindir}
-strip %{_builddir}/NTetris-1.0/build/ntetris
-%{__install} -pm 0755 %{_builddir}/NTetris-1.0/build/ntetris %{buildroot}%{_bindir}/ntetris
+%make_install PREFIX=%{_prefix}
 
 
 %files
