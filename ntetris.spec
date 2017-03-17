@@ -2,6 +2,7 @@ Name:           ntetris
 Version:        1.0
 Release:        1%{?dist}
 Summary:        Simple tetris for command line
+Summary(cs):    Jednoduchá hra tetris pro terminál
 
 License:        MIT
 URL:            https://github.com/sparkoo/NTetris
@@ -12,6 +13,9 @@ Requires:       ncurses
 
 %description
 Ncurses-based simple tetris game for CLI gaming.
+
+%description -l cs
+Jednoduchá hra tetris postavená na knihovně ncurses pro hraní v terminálu.
 
 %prep
 %setup -q -n NTetris-%{version}
