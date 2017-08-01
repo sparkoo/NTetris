@@ -6,7 +6,7 @@ Summary(cs):    Jednoduchá terminálová logická hra
 
 License:        MIT
 URL:            https://github.com/sparkoo/NTetris
-Source0:        https://github.com/sparkoo/NTetris/archive/1.0.tar.gz
+Source0:        https://github.com/sparkoo/NTetris/archive/%{version}.tar.gz
 
 BuildRequires:  ncurses-devel
 Requires:       ncurses
