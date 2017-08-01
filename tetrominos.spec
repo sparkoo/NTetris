@@ -15,7 +15,7 @@ Requires:       ncurses
 Build tetromino blocks to fill full lines. Based on Ncurses lib for CLI gaming.
 
 %description -l cs
-Postavte tetromino bloky tak, aby zaplnily celé řádky. Napsané pomocí Ncurses knihovny pro hraní v terminálu.
+Postavte tetromino bloky tak, aby zaplnily celé řádky.
 
 %prep
 %setup -q -n NTetris-%{version}
