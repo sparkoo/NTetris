@@ -1,4 +1,4 @@
-Name:           ntetrominos
+Name:           tetrominos
 Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Simple CLI logical game
@@ -28,12 +28,13 @@ export LDFLAGS="%{__global_ldflags} -Wl,--build-id=sha1"
 
 %install
 %make_install PREFIX=%{_prefix}
+mv %{buildroot}%{_bindir}/ntetris %{buildroot}%{_bindir}/%{name}
 
 
 %files
 %doc README.md
 %license LICENSE
-%{_bindir}/ntetrominos
+%{_bindir}/%{name}
 
 
 %changelog
