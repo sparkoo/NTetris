@@ -1,8 +1,8 @@
-Name:           ntetris
+Name:           ntetrominos
 Version:        1.0
 Release:        1%{?dist}
-Summary:        Simple tetris for command line
-Summary(cs):    Jednoduchá hra tetris pro terminál
+Summary:        Simple CLI logical game
+Summary(cs):    Jednoduchá terminálová logická hra
 
 License:        MIT
 URL:            https://github.com/sparkoo/NTetris
@@ -12,10 +12,10 @@ BuildRequires:  ncurses-devel
 Requires:       ncurses
 
 %description
-Ncurses-based simple tetris game for CLI gaming.
+Build tetromino blocks to fill full lines. Based on Ncurses lib for CLI gaming.
 
 %description -l cs
-Jednoduchá hra tetris postavená na knihovně ncurses pro hraní v terminálu.
+Postavte tetromino bloky tak, aby zaplnily celé řádky. Napsané pomocí Ncurses knihovny pro hraní v terminálu.
 
 %prep
 %setup -q -n NTetris-%{version}
@@ -33,7 +33,7 @@ export LDFLAGS="%{__global_ldflags} -Wl,--build-id=sha1"
 %files
 %doc README.md
 %license LICENSE
-%{_bindir}/ntetris
+%{_bindir}/ntetrominos
 
 
 %changelog
