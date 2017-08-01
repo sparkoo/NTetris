@@ -1,5 +1,5 @@
 Name:           ntetrominos
-Version:        1.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Simple CLI logical game
 Summary(cs):    Jednoduchá terminálová logická hra
@@ -37,5 +37,5 @@ export LDFLAGS="%{__global_ldflags} -Wl,--build-id=sha1"
 
 
 %changelog
-* Wed Feb  8 2017 Michal Vala <mvala@redhat.com> 1.0-1
+* Wed Feb  8 2017 Michal Vala <mvala@redhat.com> 1.0.1-1
 - initial version created many years ago as a school project
